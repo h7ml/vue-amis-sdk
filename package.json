@@ -1,0 +1,91 @@
+{
+  "name": "vue-amis-sdk",
+  "version": "v3.0.0",
+  "author": {
+    "name": "h7ml",
+    "mail": "h7ml@qq.com",
+    "github": "https://github.com/h7ml/vue-amis-sdk"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "description": "This project is based on veaury and mainly focuses on the encapsulation of amis-editor",
+  "keywords": [
+    "vue3",
+    "amis",
+    "vue",
+    "vue-amis",
+    "amis-vue",
+    "vue-amis-sdk",
+    "amis-admin-vue",
+    "renderer",
+    "json",
+    "schema"
+  ],
+  "private": false,
+  "main": "dist/vue-amis-sdk.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-amis-sdk.es.js",
+      "require": "./dist/vue-amis-sdk.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h7ml/vue-amis-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/h7ml/vue-amis-sdk/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "docs": "vite build --config vite.doc.config.js",
+    "serve": "vite preview",
+    "clean": "rd /s /q .\\node_modules",
+    "ri": "npm run clean && pnpm i"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "copy-to-clipboard": "^3.3.1",
+    "core-js": "^3.22.7",
+    "path-to-regexp": "^6.2.1",
+    "qs": "^6.10.3",
+    "vue-demi": "latest"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/composition-api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.1",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
+    "@vue/compiler-sfc": "^3.2.31",
+    "amis": "^1.10.0",
+    "amis-editor": "4.1.0-beta.28",
+    "axios": "^0.27.2",
+    "element-plus": "latest",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "sass": "latest",
+    "typescript": "latest",
+    "veaury": "^2.0.1",
+    "vite": "latest",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
+  }
+}
