@@ -79,9 +79,9 @@ yarn add vue-amis-sdk --save
 
 ### version
 
-| [vue-amis-sdk](https://www.npmjs.com/package/vue-amis-sdk)                                                              | [amis](https://www.npmjs.com/package/amis)                                                               | [amis-editor](https://www.npmjs.com/package/amis-editor)                                                                 |
-|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.0/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.0) | [![amis](https://img.shields.io/badge/amis-1.9.0-green.svg)](https://www.npmjs.com/package/amis/v/1.9.0) | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
+| [vue-amis-sdk](https://www.npmjs.com/package/vue-amis-sdk)                                                              | [amis](https://www.npmjs.com/package/amis)                                                                 | [amis-editor](https://www.npmjs.com/package/amis-editor)                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.0/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.0) | [![amis](https://img.shields.io/badge/amis-1.10.0-green.svg)](https://www.npmjs.com/package/amis/v/1.10.0) | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
 
 ### repo
 - [vue-amis-sdk editor](https://vue-amis-sdk.vercel.app/)
