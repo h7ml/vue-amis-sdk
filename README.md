@@ -46,52 +46,42 @@ yarn add vue-amis-sdk --save
 
 ```javascript
 <template>
-  <div id="app">
-    <vue-amis-sdk id="editorName" theme="cxd" className="is-fixed" :preview="isPreview" :isMobile="isMobile" @onChange="onChange" :value="schema"  />
+  <div id='app'>
+    <vue-amis-sdk
+      id='editorName'
+      theme='cxd'
+      className='is-fixed'
+    :preview='isPreview'
+    :isMobile='isMobile'
+    @onChange='onChange'
+    :value='schema'
+    />
   </div>
 </template>
-
 <script>
-
-
-export default {
+  export default {
   name: 'App',
-  components: {
-  },
   data() {
-    return {
-      isPreview:false,
-      isMobile:false,
-      post: {
-        json: '',
-        amis_page_id: 15,
-      },
-      baseURL: 'https://h7ml.cn',
-      schema: {},
-    }
-  },
-  onLoad() {
-    
-  },
+  return {
+  isPreview: false,
+  isMobile: false,
+  schema: {}
+}
+},
   methods: {
-    onChange(e) {
-    },
-  }
+  onChange(e) {
+  console.log(e)
+}
+}
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
 ```
 
+### version
+
+| [vue-amis-sdk](https://www.npmjs.com/package/vue-amis-sdk)                                                              | [amis](https://www.npmjs.com/package/amis)                                                               | [amis-editor](https://www.npmjs.com/package/amis-editor)                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.0/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.0) | [![amis](https://img.shields.io/badge/amis-1.9.0-green.svg)](https://www.npmjs.com/package/amis/v/1.9.0) | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
 
 ### repo
 - [vue-amis-sdk editor](https://vue-amis-sdk.vercel.app/)
