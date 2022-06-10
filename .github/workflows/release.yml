@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Generate files
-        run: yarn build
+        run: yarn lib
       - name: publish
         run: npm publish --access=public
         env:
