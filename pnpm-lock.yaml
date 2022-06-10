@@ -15,7 +15,6 @@ specifiers:
   css-loader: ^6.6.0
   http-proxy-middleware: ^2.0.6
   lib: ^4.3.3
-  monaco-editor-webpack-plugin: ^6.0.0
   postcss-custom-properties: ^12.1.4
   react: ^16.14.0
   react-dom: ^16.14.0
@@ -57,7 +56,6 @@ dependencies:
 devDependencies:
   '@vue/cli-plugin-babel': 5.0.4_1a7ab14a3c0306b5654c447f15269443
   '@vue/cli-service': 5.0.4_e863eb8a82b4a45ffc7324ebf95ac252
-  monaco-editor-webpack-plugin: 6.0.0_webpack@4.46.0
   sass: 1.52.1
   sass-loader: 8.0.2_sass@1.52.1+webpack@4.46.0
   vue-template-compiler: 2.6.14
@@ -5846,16 +5844,6 @@ packages:
   /moment/2.29.3:
     resolution: {integrity: sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==}
     dev: false
-
-  /monaco-editor-webpack-plugin/6.0.0_webpack@4.46.0:
-    resolution: {integrity: sha512-vC886Mzpd2AkSM35XLkfQMjH+Ohz6RISVwhAejDUzZDheJAiz6G34lky1vyO8fZ702v7IrcKmsGwL1rRFnwvUA==}
-    peerDependencies:
-      monaco-editor: 0.30.x
-      webpack: ^4.5.0 || 5.x
-    dependencies:
-      loader-utils: 2.0.2
-      webpack: 4.46.0
-    dev: true
 
   /monaco-editor/0.30.1:
     resolution: {integrity: sha512-B/y4+b2O5G2gjuxIFtCE2EkM17R2NM7/3F8x0qcPsqy4V83bitJTIO4TIeZpYlzu/xy6INiY/+84BEm6+7Cmzg==}
