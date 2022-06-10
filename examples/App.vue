@@ -12,6 +12,11 @@
   </div>
 </template>
 <script>
+import "amis/lib/themes/cxd.css";
+import "amis/lib/themes/ang.css";
+import "amis/lib/helper.css";
+import "amis/sdk/sdk.css";
+import "amis-editor/dist/style.css";
 export default {
   name: 'App',
   data() {

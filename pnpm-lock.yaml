@@ -7,7 +7,7 @@ specifiers:
   '@babel/plugin-proposal-optional-chaining': ^7.16.7
   '@vue/cli-plugin-babel': ^5.0.3
   '@vue/cli-service': ^5.0.3
-  amis: ^1.10.0
+  amis: ^1.10.2
   amis-editor: ^4.1.0-beta.28
   axios: ^0.24.0
   compression-webpack-plugin: 5.0.1
@@ -15,6 +15,7 @@ specifiers:
   css-loader: ^6.6.0
   http-proxy-middleware: ^2.0.6
   lib: ^4.3.3
+  monaco-editor-webpack-plugin: ^6.0.0
   postcss-custom-properties: ^12.1.4
   react: ^16.14.0
   react-dom: ^16.14.0
@@ -35,8 +36,8 @@ dependencies:
   '@babel/plugin-proposal-nullish-coalescing-operator': 7.17.12_@babel+core@7.18.2
   '@babel/plugin-proposal-object-rest-spread': 7.18.0_@babel+core@7.18.2
   '@babel/plugin-proposal-optional-chaining': 7.17.12_@babel+core@7.18.2
-  amis: 1.10.0_react-dom@16.14.0+react@16.14.0
-  amis-editor: 4.1.0-beta.28_8932ba386ccdc7412fa4ef1c53b55918
+  amis: 1.10.2_react-dom@16.14.0+react@16.14.0
+  amis-editor: 4.1.0-beta.28_5e3e9ffccbba595222bc0010288bd2b6
   axios: 0.24.0
   compression-webpack-plugin: 5.0.1_webpack@4.46.0
   core-js: 3.22.7
@@ -56,6 +57,7 @@ dependencies:
 devDependencies:
   '@vue/cli-plugin-babel': 5.0.4_1a7ab14a3c0306b5654c447f15269443
   '@vue/cli-service': 5.0.4_e863eb8a82b4a45ffc7324ebf95ac252
+  monaco-editor-webpack-plugin: 6.0.0_webpack@4.46.0
   sass: 1.52.1
   sass-loader: 8.0.2_sass@1.52.1+webpack@4.46.0
   vue-template-compiler: 2.6.14
@@ -2234,13 +2236,13 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /amis-editor/4.1.0-beta.28_8932ba386ccdc7412fa4ef1c53b55918:
+  /amis-editor/4.1.0-beta.28_5e3e9ffccbba595222bc0010288bd2b6:
     resolution: {integrity: sha512-MriLICeNG30eGl7YpTkLZeLM9Qt1p3Zpnr99MVw7eXb/aaO/8X0uc2LfXE8LJyLaGsJ74BmkdCq4ohHCfdZ2Ag==}
     peerDependencies:
       amis: '*'
     dependencies:
       '@webcomponents/webcomponentsjs': 2.6.0
-      amis: 1.10.0_react-dom@16.14.0+react@16.14.0
+      amis: 1.10.2_react-dom@16.14.0+react@16.14.0
       deep-diff: 1.0.2
       json-ast-comments: 1.1.0
       mobx: 4.15.7
@@ -2265,8 +2267,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /amis/1.10.0_react-dom@16.14.0+react@16.14.0:
-    resolution: {integrity: sha512-dHs86vf85x7Y9dXSzbSMrkKqhZ0oUhlC4TGarQv1ZUqRjeNJBN/4K7vcmxYN3O7EXYNcHk37woTTj2vyPlTvBA==}
+  /amis/1.10.2_react-dom@16.14.0+react@16.14.0:
+    resolution: {integrity: sha512-YN0JhKcDzJfygIhkujE3tm9t4uFDNfbJ8yVhBJYw4Yh2MKkT21RUyMxwFQ8+Hx2G6kUmSiW0PfdYoW/2sJGYyg==}
     peerDependencies:
       react: '>=16.8.6'
       react-dom: '>=16.8.6'
@@ -5845,6 +5847,16 @@ packages:
     resolution: {integrity: sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==}
     dev: false
 
+  /monaco-editor-webpack-plugin/6.0.0_webpack@4.46.0:
+    resolution: {integrity: sha512-vC886Mzpd2AkSM35XLkfQMjH+Ohz6RISVwhAejDUzZDheJAiz6G34lky1vyO8fZ702v7IrcKmsGwL1rRFnwvUA==}
+    peerDependencies:
+      monaco-editor: 0.30.x
+      webpack: ^4.5.0 || 5.x
+    dependencies:
+      loader-utils: 2.0.2
+      webpack: 4.46.0
+    dev: true
+
   /monaco-editor/0.30.1:
     resolution: {integrity: sha512-B/y4+b2O5G2gjuxIFtCE2EkM17R2NM7/3F8x0qcPsqy4V83bitJTIO4TIeZpYlzu/xy6INiY/+84BEm6+7Cmzg==}
     dev: false
@@ -6002,7 +6014,7 @@ packages:
     dev: true
 
   /normalize-path/2.1.1:
-    resolution: {integrity: sha1-GrKLVW4Zg2Oowab35vogE3/mrtk=}
+    resolution: {integrity: sha512-3pKJwH184Xo/lnH6oyP1q2pMd7HcypqqmRs91/6/i2CGtWwIKGCkOOMTm/zXbgTEWHw1uNpNi/igc3ePOYHb6w==}
     engines: {node: '>=0.10.0'}
     dependencies:
       remove-trailing-separator: 1.1.0
@@ -7638,7 +7650,7 @@ packages:
     dev: true
 
   /setimmediate/1.0.5:
-    resolution: {integrity: sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=}
+    resolution: {integrity: sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==}
 
   /setprototypeof/1.1.0:
     resolution: {integrity: sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==}

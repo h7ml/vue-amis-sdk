@@ -1,6 +1,6 @@
 {
   "name": "vue-amis-sdk",
-  "version": "1.10.0",
+  "version": "1.10.2",
   "private": false,
   "main": "sdk/vue-amis-sdk.umd.min.js",
   "browser": "sdk/vue-amis-sdk.umd.min.js",
@@ -26,7 +26,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-proposal-optional-chaining": "^7.16.7",
-    "amis": "^1.10.0",
+    "amis": "^1.10.2",
     "amis-editor": "^4.1.0-beta.28",
     "axios": "^0.24.0",
     "compression-webpack-plugin": "5.0.1",
@@ -45,11 +45,12 @@
     "webpack-bundle-analyzer": "^4.5.0"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^5.0.3",
     "@vue/cli-service": "^5.0.3",
+    "monaco-editor-webpack-plugin": "^6.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",

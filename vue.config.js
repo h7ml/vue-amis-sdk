@@ -5,7 +5,7 @@ const Webpack = require("webpack");
 const webpackBanner =
     " project: vue-amis-sdk \n github https://github.com/h7ml/vue-amis-sdk \n author: h7ml(h7ml@qq.com) \n Time: ";
 const dateTime = new Date();
-
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 function resolve(dir) {
     return path.join(__dirname, "..", dir);
 }
@@ -33,6 +33,11 @@ module.exports = {
             template: "public/index.html",
             filename: "index.html",
         },
+    },
+    configureWebpack:{
+        plugins:[
+          new MonacoWebpackPlugin()
+        ]
     },
     chainWebpack: (config) => {
         if (process.env.BUILD_TARGET === "lib") {
