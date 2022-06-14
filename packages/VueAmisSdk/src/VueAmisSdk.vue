@@ -7,8 +7,11 @@
       :preview="isPreview"
       :isMobile="isMobile"
       @onChange="onChange"
+      @onPreview="onPreview"
+      @onSave="onSave"
       :value="schema"
       :plugins="plugins"
+      :showCustomRenderersPanel="showCustomRenderersPanel"
     />
   </div>
 </template>
@@ -33,6 +36,10 @@ export default {
       default: false,
     },
     isMobile: {
+      type: Boolean,
+      default: false,
+    },
+    showCustomRenderersPanel: {
       type: Boolean,
       default: false,
     },
@@ -71,6 +78,14 @@ export default {
     onChange(e) {
       this.schema = e;
       this.$emit("change", e);
+    },
+    onSave(e) {
+      console.log(e)
+      this.$emit("onSave", e);
+    },
+    onPreview(e) {
+      console.log(e)
+      this.$emit("onPreview", e);
     },
   },
 };

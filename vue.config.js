@@ -8,6 +8,7 @@ const dateTime = new Date();
 function resolve(dir) {
     return path.join(__dirname, "..", dir);
 }
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = {
     devServer: {
@@ -32,6 +33,11 @@ module.exports = {
             template: "public/index.html",
             filename: "index.html",
         },
+    },
+    configureWebpack: {
+        plugins: [
+            new MonacoWebpackPlugin()
+        ]
     },
     chainWebpack: (config) => {
         if (process.env.BUILD_TARGET === "lib") {
