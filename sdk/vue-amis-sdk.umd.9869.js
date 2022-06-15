@@ -1,7 +1,7 @@
 "use strict";
 ((typeof self !== 'undefined' ? self : this)["webpackChunkvue_amis_sdk"] = (typeof self !== 'undefined' ? self : this)["webpackChunkvue_amis_sdk"] || []).push([[9869],{
 
-/***/ 89869:
+/***/ 10627:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);

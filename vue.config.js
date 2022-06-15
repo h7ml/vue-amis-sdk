@@ -49,9 +49,6 @@ module.exports = {
                     deleteOriginalAssets: false, // 不删除源文件
                 })
             );
-            config
-                .plugin("banner")
-                .use(Webpack.BannerPlugin, [`${webpackBanner}${dateTime}`]);
             config.plugins.push(
                 new UglifyJsPlugin({
                     uglifyOptions: {
