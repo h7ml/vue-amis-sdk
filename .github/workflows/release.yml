@@ -22,13 +22,8 @@ jobs:
       - name: Setup
         run: npm i -g @antfu/ni pnpm
 
-      - run: npx changelogithub
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
-
       - name: Install Dependencies
-        run: nci
+        run: pnpm install
 
       - name: PNPM build
         run: nr build
