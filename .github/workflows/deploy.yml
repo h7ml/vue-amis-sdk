@@ -1,0 +1,101 @@
+name: deploy
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+# 设置上海时区
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build:
+    name: build 🚀
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ latest,current,stable ]
+    steps:
+      - name: Checkout 🚀
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }} 🚀
+        uses: actions/setup-node@v2
+      - name: Cache yarn modules  🚀
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-yarn-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+      - name: Install dependencies  🚀
+        run: yarn install
+      - name: Generate files  🚀
+        run: yarn build
+
+ sync:
+   name: sync gitee 🚀
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout 🚀
+       uses: actions/checkout@v2
+     - name: Sync vue-amis-sdk 🚀
+       uses: Yikun/hub-mirror-action@master
+       with:
+         src: github/h7ml
+         dst: gitee/h7ml
+         dst_key: ${{ secrets.PRIVATE_KEY }}
+         dst_token: ${{ secrets.GIT_TOKEN }}
+         static_list: "vue-amis-sdk"
+  deploy:
+    name: deploy 🚀
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ latest ]
+    steps:
+      - name: Checkout 🚀
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }} 🚀
+        uses: actions/setup-node@v2
+      - name: Cache yarn modules  🚀
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-yarn-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+      - name: yarn script 🚀
+        run: |
+          yarn install
+          yarn build &> /dev/null
+      - name: Upload  vue-amis-sdk 🚀
+        uses: actions/upload-artifact@v2
+        with:
+          name: vue-amis-sdk
+          path: dist
+      - name: Deploy to github gh-pages 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
+      - name: Deploy to surge 🚀
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'vue-amis-sdk.surge.sh'
+          project: './dist'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+      - name: Upload surge service and generate preview URL 🚀
+        id: deploy
+        run: |
+          export GITHUB_SHA=${{ github.sha }}
+          export GITHUB_SHA_SUB=${GITHUB_SHA: 0: 7 }
+          export DEPLOY_DOMAIN=https://vue-amis-sdk-$GITHUB_SHA_SUB.surge.sh
+          npx surge --project ./dist --domain $DEPLOY_DOMAIN --token ${{ secrets.surge_token }}
+          echo the preview URL is $DEPLOY_DOMAIN
+          echo "::set-output name=url::$DEPLOY_DOMAIN"
