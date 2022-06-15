@@ -1,6 +1,7 @@
 # vue-amis-sdk
 
 ## about
+
 - This project is based on [vuera](https://github.com/akxcv/vuera) and mainly focuses on the encapsulation of [amis-editor](https://www.npmjs.com/package/amis-editor)
 - You can edit at [this](https://vue-amis-sdk.vercel.app/). The [proxy](https://github.com/h7ml/vue-amis-sdk/blob/master/vercel.json) mode is enabled. You can copy the JSON of [amis](https://aisuda.bce.baidu.com/amis/examples/index). It supports direct rendering
 
@@ -85,11 +86,13 @@ export default {
 
 ### version
 
-| [vue-amis-sdk](https://www.npmjs.com/package/vue-amis-sdk)                                                               | [amis](https://www.npmjs.com/package/amis)                                                                 | [amis-editor](https://www.npmjs.com/package/amis-editor)                                                                 |
-|--------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| [vue-amis-sdk](https://www.npmjs.com/package/vue-amis-sdk)                                                               | [amis](https://www.npmjs.com/package/amis)                                                                 | [amis-editor](https://www.npmjs.com/package/amis-editor)                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.0/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.0) | [![amis](https://img.shields.io/badge/amis-1.10.0-green.svg)](https://www.npmjs.com/package/amis/v/1.10.0) | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
-| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.2/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.2) | [![amis](https://img.shields.io/badge/amis-1.10.2-green.svg)](https://www.npmjs.com/package/amis/v/1.10.2) | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
+| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.2/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.2) | [![amis](https://img.shields.io/badge/amis-1.9.2-green.svg)](https://www.npmjs.com/package/amis/v/1.10.2)  | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.28/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.28) |
+| [![amis-editor](https://badgen.net/badge/vue-amis-sdk/1.10.3/blue)](https://www.npmjs.com/package/vue-amis-sdk/v/1.10.2) | [![amis](https://img.shields.io/badge/amis-1.9.1beta.11-green.svg)](https://www.npmjs.com/package/amis/v/1.9.1-beta.11)  | [![amis-editor](https://badgen.net/badge/vue-amis-sdk/4.1.0-beta.24/blue)](https://www.npmjs.com/package/amis-editor/v/4.1.0-beta.24) |
 
 ### repo
+
 - [vue-amis-sdk editor](https://vue-amis-sdk.vercel.app/)
 - [vue-amis-sdk repo](https://github.com/h7ml/vue-amis-sdk)
