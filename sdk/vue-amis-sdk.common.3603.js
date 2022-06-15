@@ -391,7 +391,7 @@ var LibFiles = /** @class */ (function () {
         if (this.isLibFile(uri) && this._hasFetchedLibFiles) {
             return monaco_editor_core/* editor.createModel */.j6.createModel(this._libFiles[uri.path.slice(1)], 'typescript', uri);
         }
-        var matchedLibFile = monaco_contribution/* typescriptDefaults.getExtraLibs */.TG.getExtraLibs()[fileName];
+        var matchedLibFile = monaco_contribution.typescriptDefaults.getExtraLibs()[fileName];
         if (matchedLibFile) {
             return monaco_editor_core/* editor.createModel */.j6.createModel(matchedLibFile.content, 'typescript', uri);
         }
