@@ -73,7 +73,7 @@
     "prettier": "^2.7.0",
     "sass": "~1.32.13",
     "sass-loader": "^10.2.0",
-    "vue-eslint-parser": "8.0.1",
+    "vue-eslint-parser": "9.0.3",
     "vue-template-compiler": "^2.6.11",
     "webpack": "4.46.0"
   },
